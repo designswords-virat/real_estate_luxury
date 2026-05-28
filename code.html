@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Aetheris — architectural realty for those who value the luxury of space. Curated residences, estates, and bespoke developments worldwide."/>
+<meta name="theme-color" content="#ffffff"/>
+<meta property="og:title" content="AETHERIS | Architectural Realty"/>
+<meta property="og:description" content="Defining the future of architectural exclusivity. Cinematic architecture for the world's most discerning collectors."/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121414'/%3E%3Ctext x='50%25' y='70%25' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='22' fill='%23e1c299'%3EA%3C/text%3E%3C/svg%3E"/>
+<title>AETHERIS | Architectural Realty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    /* Monochrome — pure white surfaces, royal black ink, no accent color */
+                    "background": "#ffffff", "surface": "#ffffff",
+                    "surface-dim": "#e8e8e8", "surface-bright": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#fafafa",
+                    "surface-container": "#f4f4f4",
+                    "surface-container-high": "#ededed",
+                    "surface-container-highest": "#e6e6e6",
+                    "surface-variant": "#ededed", "surface-tint": "#0a0a0a",
+                    "on-background": "#0a0a0a", "on-surface": "#0a0a0a",
+                    "on-surface-variant": "#4a4a4a",
+                    "outline": "#7a7a7a", "outline-variant": "#cfcfcf",
+                    "inverse-surface": "#1a1a1a", "inverse-on-surface": "#f4f4f4",
+                    "primary": "#0a0a0a", "on-primary": "#ffffff",
+                    "primary-container": "#f0f0f0", "on-primary-container": "#0a0a0a",
+                    "primary-fixed": "#0a0a0a", "primary-fixed-dim": "#0a0a0a",
+                    "on-primary-fixed": "#ffffff", "on-primary-fixed-variant": "#3a3a3a",
+                    "inverse-primary": "#cfcfcf",
+                    "secondary": "#0a0a0a", "on-secondary": "#ffffff",
+                    "secondary-container": "#f0f0f0", "on-secondary-container": "#0a0a0a",
+                    "secondary-fixed": "#0a0a0a", "secondary-fixed-dim": "#3a3a3a",
+                    "on-secondary-fixed": "#ffffff", "on-secondary-fixed-variant": "#7a7a7a",
+                    /* Tertiary unified to royal black — replaces champagne accent */
+                    "tertiary": "#0a0a0a", "on-tertiary": "#ffffff",
+                    "tertiary-container": "#f0f0f0", "on-tertiary-container": "#0a0a0a",
+                    "tertiary-fixed": "#0a0a0a", "tertiary-fixed-dim": "#0a0a0a",
+                    "on-tertiary-fixed": "#ffffff", "on-tertiary-fixed-variant": "#7a7a7a",
+                    "error": "#ba1a1a", "on-error": "#ffffff",
+                    "error-container": "#ffdad6", "on-error-container": "#410002"
+                },
+                "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                "spacing": {
+                    "margin-mobile": "24px", "max-width": "1440px", "gutter": "32px",
+                    "margin-tablet": "40px", "unit": "8px", "margin-desktop": "80px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Cinzel", "serif"], "label-md": ["Lato", "sans-serif"], "display-xl": ["Cinzel", "serif"],
+                    "headline-lg": ["Cinzel", "serif"], "headline-md": ["Cinzel", "serif"],
+                    "body-md": ["Lato", "sans-serif"], "headline-lg-mobile": ["Cinzel", "serif"],
+                    "label-lg": ["Lato", "sans-serif"], "body-lg": ["Lato", "sans-serif"]
+                },
+                "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-xl": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    :focus-visible { outline: 1px solid #0a0a0a; outline-offset: 4px; }
+    .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    /* ===== Lenis smooth scroll resets ===== */
+    html.lenis, html.lenis body { height: auto; }
+    html.lenis.lenis-smooth { scroll-behavior: auto !important; }
+    html.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    html.lenis.lenis-stopped { overflow: clip; }
+    html.lenis.lenis-scrolling iframe { pointer-events: none; }
+    .glass-panel {
+        background: rgba(0, 0, 0, 0.025);
+        backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== Amenities bento (image-backed) ===== */
+    .amenity-tile {
+        position: relative; overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #0a0a0a;
+        min-height: 280px;
+    }
+    .amenity-tile .amenity-img {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%; object-fit: cover;
+        transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+        filter: brightness(0.7) saturate(0.9);
+        z-index: 0;
+    }
+    .amenity-tile:hover .amenity-img {
+        transform: scale(1.06);
+        filter: brightness(0.85) saturate(1);
+    }
+    .amenity-tile .amenity-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.92) 100%);
+        z-index: 1;
+        transition: background 0.6s ease;
+    }
+    .amenity-tile:hover .amenity-overlay {
+        background: linear-gradient(180deg, rgba(10,10,10,0.10) 0%, rgba(10,10,10,0.45) 55%, rgba(10,10,10,0.88) 100%);
+    }
+    .amenity-tile .amenity-content {
+        position: relative; z-index: 2;
+        height: 100%;
+        display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .text-glow { text-shadow: 0 0 20px rgba(201, 198, 197, 0.3); }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .fine-line {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.18) 50%, rgba(0,0,0,0) 100%);
+    }
+
+    /* ===== Cinematic letterbox intro ===== */
+    .letterbox {
+        position: fixed; left: 0; right: 0; z-index: 100;
+        background: #0a0a0a; pointer-events: none;
+        will-change: height;
+    }
+    .letterbox.top { top: 0; height: 50vh; }
+    .letterbox.bottom { bottom: 0; height: 50vh; }
+
+    /* ===== Nav state ===== */
+    #main-nav {
+        transition: background 0.6s ease, backdrop-filter 0.6s ease,
+                    height 0.6s ease, border-color 0.6s ease;
+    }
+    #main-nav.nav-scrolled .nav-row { height: 5rem; }
+    .nav-row { height: 6rem; transition: height 0.6s ease; }
+
+    /* ===== Hero rack-focus blur on load ===== */
+    .hero-img {
+        filter: blur(18px) brightness(0.85);
+        transform: scale(1.06);
+        will-change: filter, transform;
+    }
+
+    /* ===== Architectural grid overlay on hero ===== */
+    .grid-overlay {
+        position: absolute; inset: 0; pointer-events: none;
+        opacity: 0;
+        background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+        background-size: calc(100% / 12) calc(100% / 8);
+        mix-blend-mode: screen;
+    }
+
+    /* ===== Cinematic title-card (3D perspective tilt + scale) ===== */
+    .title-card {
+        opacity: 0;
+        transform: perspective(800px) rotateX(22deg) scale(1.08);
+        transform-origin: 50% 100%;
+        will-change: transform, opacity;
+    }
+
+    /* ===== Horizontal slat (venetian) image reveal ===== */
+    .slat-reveal { position: relative; overflow: hidden; }
+    .slat-reveal > .slat {
+        position: absolute; left: 0; right: 0;
+        height: 16.7%; background: #0a0a0a;
+        will-change: transform;
+        z-index: 3;
+    }
+    .slat-reveal > .slat:nth-child(2) { top: 0%; }
+    .slat-reveal > .slat:nth-child(3) { top: 16.7%; }
+    .slat-reveal > .slat:nth-child(4) { top: 33.4%; }
+    .slat-reveal > .slat:nth-child(5) { top: 50.1%; }
+    .slat-reveal > .slat:nth-child(6) { top: 66.8%; }
+    .slat-reveal > .slat:nth-child(7) { top: 83.5%; }
+
+    /* ===== Property card metadata slide-in from right ===== */
+    .residence-card {
+        position: relative;
+        overflow: hidden;
+    }
+    .residence-card .card-image {
+        transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @media (hover: hover) {
+        .residence-card:hover .card-image { transform: scale(1.06); }
+        .residence-card:hover .card-meta { transform: translateX(0); }
+    }
+    .residence-card .card-meta {
+        position: absolute; top: 0; right: 0; bottom: 0;
+        width: 60%; max-width: 320px;
+        padding: 2rem;
+        background: rgba(10, 10, 10, 0.78);
+        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        transform: translateX(102%);
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        display: flex; flex-direction: column; justify-content: flex-end; gap: 1rem;
+        z-index: 4;
+    }
+    .residence-card .card-base-info {
+        position: absolute; left: 0; right: 0; bottom: 0;
+        padding: 2rem; z-index: 2;
+        background: linear-gradient(to top, rgba(10,10,10,0.85), transparent);
+        color: #ffffff;
+    }
+    /* Title overlay text always renders white over the dark image gradient (monochrome theme made
+       the on-surface-variant token dark, which was invisible against the gradient) */
+    .residence-card .card-base-info,
+    .residence-card .card-base-info p { color: #ffffff !important; }
+
+    /* Mobile / touch — CSS grid: image + overlay share row 1, meta block sits in row 2 below.
+       This keeps the title overlay pinned to the image bottom (not to the meta) while still
+       making all the meta data reachable without hovering. */
+    @media (max-width: 767px), (hover: none) {
+        .residence-card { overflow: visible; }
+        .residence-card .slat-reveal {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            aspect-ratio: auto !important;
+            overflow: visible !important;
+            height: auto !important;
+        }
+        .residence-card .slat-reveal .card-image {
+            grid-row: 1; grid-column: 1;
+            width: 100%; height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            align-self: stretch; justify-self: stretch;
+        }
+        .residence-card .slat-reveal .slat { display: none !important; }
+        .residence-card .slat-reveal .card-base-info {
+            grid-row: 1; grid-column: 1;
+            position: relative !important;
+            left: auto !important; right: auto !important; bottom: auto !important;
+            align-self: end;
+            background: linear-gradient(to top, rgba(10,10,10,0.85) 30%, transparent) !important;
+            padding: 1.5rem !important;
+            z-index: 2;
+        }
+        .residence-card .slat-reveal .card-meta {
+            grid-row: 2; grid-column: 1;
+            position: relative !important;
+            top: auto !important; right: auto !important; bottom: auto !important; left: auto !important;
+            width: 100%; max-width: none !important;
+            transform: none !important;
+            background: transparent !important;
+            backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+            border-left: none;
+            border-top: 1px solid #cfcfcf;
+            padding: 1.25rem 0 0 0 !important;
+            margin-top: 1.25rem;
+            gap: 0.75rem;
+            color: #0a0a0a !important;
+        }
+        .residence-card .slat-reveal .card-meta *,
+        .residence-card .slat-reveal .card-meta .text-tertiary,
+        .residence-card .slat-reveal .card-meta .coord-tag,
+        .residence-card .slat-reveal .card-meta a { color: #0a0a0a !important; }
+        .residence-card .slat-reveal .card-meta a { border-color: #0a0a0a !important; }
+    }
+    .coord-tag {
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ffffff;
+        opacity: 0.85;
+    }
+
+    /* ===== Sticky photo + caption crossfade ===== */
+    .sticky-photo-wrap {
+        position: relative;
+    }
+    @media (min-width: 768px) {
+        .sticky-photo-wrap .sticky-photo {
+            position: sticky; top: 15vh;
+        }
+    }
+    .caption-block {
+        opacity: 0.25;
+        transition: opacity 0.7s ease;
+    }
+    .caption-block.is-active { opacity: 1; }
+
+    /* ===== Pinned gallery: image crossfade (Awwwards anchor moment) ===== */
+    .gallery-stack {
+        position: relative;
+        width: 100%; height: 100%;
+        overflow: hidden;
+    }
+    .gallery-stack > img {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%; object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1);
+    }
+    .gallery-stack > img.is-active { opacity: 1; }
+
+    /* ===== Custom cursor (dark theme: mix-blend-difference) ===== */
+    .cursor-dot, .cursor-ring {
+        position: fixed; top: 0; left: 0;
+        pointer-events: none; z-index: 250;
+        mix-blend-mode: difference;
+        will-change: transform;
+    }
+    .cursor-dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: #fff;
+        transform: translate(-50%, -50%);
+    }
+    .cursor-ring {
+        width: 32px; height: 32px; border-radius: 50%;
+        border: 1px solid #fff;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 0.35s cubic-bezier(0.22,1,0.36,1),
+                    width 0.35s cubic-bezier(0.22,1,0.36,1),
+                    height 0.35s cubic-bezier(0.22,1,0.36,1),
+                    background 0.3s ease;
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Lato', sans-serif;
+        font-size: 9px; font-weight: 600;
+        letter-spacing: 0.18em;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    body.cursor-hover .cursor-ring {
+        transform: translate(-50%, -50%) scale(1.7);
+        background: rgba(255,255,255,0.06);
+    }
+    body.cursor-label .cursor-ring {
+        width: 80px; height: 80px;
+    }
+    @media (hover: none), (pointer: coarse) {
+        .cursor-dot, .cursor-ring { display: none; }
+    }
+    .magnetic-btn { will-change: transform; }
+
+    /* ===== Mobile menu ===== */
+    #mobile-menu {
+        transform: translateY(-100%);
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #mobile-menu.open { transform: translateY(0); }
+
+    /* ===== Scroll-to-top ===== */
+    #scroll-top {
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.5s ease;
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: auto; }
+
+    /* ===== Cinematic Film Section ===== */
+    .film-section #film-bg {
+        filter: brightness(0.55) saturate(0.9) contrast(1.05);
+        z-index: 0;
+    }
+    .film-grade {
+        background:
+            radial-gradient(ellipse at center, rgba(10,10,10,0) 30%, rgba(10,10,10,0.55) 100%),
+            linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.55) 100%);
+        z-index: 1;
+    }
+    .film-letterbox {
+        position: absolute; left: 0; right: 0; z-index: 2;
+        height: 48px; background: #0a0a0a;
+        pointer-events: none;
+    }
+    .film-letterbox-top { top: 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .film-letterbox-bottom { bottom: 0; border-top: 1px solid rgba(255,255,255,0.15); }
+    .film-meta { z-index: 3; }
+    .rec-dot {
+        display: inline-block;
+        width: 8px; height: 8px; border-radius: 50%;
+        background: #ff4d4d;
+        box-shadow: 0 0 8px rgba(255,77,77,0.7);
+        animation: rec-blink 1.6s ease-in-out infinite;
+    }
+    @keyframes rec-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+    }
+
+    /* ===== Film Modal ===== */
+    .film-modal {
+        position: fixed; inset: 0; z-index: 200;
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        display: flex; align-items: center; justify-content: center;
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.5s ease;
+    }
+    .film-modal.open { opacity: 1; pointer-events: auto; }
+    .film-player {
+        width: min(96vw, 1280px);
+        max-height: 86vh;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .film-close {
+        position: absolute; top: 24px; right: 24px;
+        width: 48px; height: 48px;
+        display: flex; align-items: center; justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: #fff;
+        transition: border-color 0.4s ease, background 0.4s ease;
+        cursor: pointer;
+    }
+    .film-close:hover { border-color: #ffffff; background: rgba(255,255,255,0.06); }
+
+    /* ============================================================
+       SECTION · THE ATELIER — typewriter coordinates + vertical line draw
+       ============================================================ */
+    .atelier-locations { position: relative; }
+    .atelier-line {
+        position: absolute; left: 0; top: 0; bottom: 0;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+    }
+    .atelier-line::after {
+        content: ""; position: absolute; left: 0; right: 0; top: 0;
+        height: 0;
+        background: #0a0a0a;
+        transition: height 1.4s cubic-bezier(0.22,1,0.36,1);
+    }
+    .atelier-locations.in .atelier-line::after { height: 100%; }
+    .atelier-item {
+        position: relative; padding: 2rem 0 2rem 2.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .atelier-item:last-child { border-bottom: none; }
+    .atelier-item::before {
+        content: ""; position: absolute; left: -4px; top: 2.7rem;
+        width: 9px; height: 9px; border-radius: 50%;
+        background: #0a0a0a;
+        transform: scale(0);
+        transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .atelier-item.in::before { transform: scale(1); }
+    .atelier-coord {
+        font-family: 'Lato', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        color: #0a0a0a;
+        opacity: 0;
+        transition: opacity 0.6s ease 0.3s;
+    }
+    .atelier-item.in .atelier-coord { opacity: 1; }
+    .atelier-name {
+        opacity: 0; transform: translateX(-12px);
+        transition: opacity 0.7s ease 0.15s, transform 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s;
+    }
+    .atelier-item.in .atelier-name { opacity: 1; transform: translateX(0); }
+
+    /* ============================================================
+       SECTION · MATERIALS — raking-light sweep across each swatch
+       ============================================================ */
+    .material-card {
+        position: relative; overflow: hidden;
+        background: transparent;
+    }
+    .material-card .material-img {
+        width: 100%; height: 100%; object-fit: cover;
+        transition: filter 0.8s ease, transform 1.2s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    /* ----- DESKTOP / hover layout: image-backed overlay card with sweep + hover reveal ----- */
+    @media (min-width: 768px) and (hover: hover) {
+        .material-card {
+            border: 1px solid rgba(255,255,255,0.08);
+            background: #0a0a0a;
+            aspect-ratio: 3/4;
+        }
+        .material-card .material-img {
+            position: absolute; inset: 0;
+            filter: brightness(0.55) contrast(1.05);
+        }
+        .material-card::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: linear-gradient(
+                115deg,
+                transparent 30%,
+                rgba(255,255,255,0.2) 45%,
+                rgba(255,255,255,0.35) 50%,
+                rgba(255,255,255,0.2) 55%,
+                transparent 70%
+            );
+            transform: translateX(-110%);
+            transition: transform 1.4s cubic-bezier(0.22,1,0.36,1);
+            pointer-events: none;
+            mix-blend-mode: screen;
+            z-index: 2;
+        }
+        .material-card.swept::after { transform: translateX(110%); }
+        .material-card .material-meta {
+            position: absolute; inset: auto 0 0 0; z-index: 3;
+            padding: 1.5rem 1.5rem 1.5rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.95) 75%);
+        }
+        .material-card .material-detail {
+            max-height: 0; opacity: 0; overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+        }
+        .material-card:hover .material-detail { max-height: 120px; opacity: 1; }
+        .material-card:hover .material-img { filter: brightness(0.8) contrast(1.1); transform: scale(1.04); }
+    }
+
+    /* ----- MOBILE / touch layout: stacked card — image on top, info block below, everything always visible ----- */
+    @media (max-width: 767px), (hover: none) {
+        .material-card {
+            display: flex; flex-direction: column;
+            border: 1px solid #c4c7c7;
+            background: #ffffff;
+        }
+        .material-card .material-img-wrap {
+            display: block; width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+        .material-card .material-img {
+            position: static !important;
+            inset: auto !important;
+            width: 100%; height: 100%; object-fit: cover;
+            filter: none;
+        }
+        .material-card .material-meta {
+            position: static !important;
+            inset: auto !important;
+            background: transparent !important;
+            padding: 1.25rem !important;
+            color: #0a0a0a;
+        }
+        .material-card .material-meta * { color: #0a0a0a !important; }
+        .material-card .material-detail {
+            max-height: none !important;
+            opacity: 1 !important;
+            overflow: visible;
+            margin-top: 0.5rem;
+        }
+        .material-card::after { display: none; }
+    }
+
+    /* ============================================================
+       SECTION · CURATORS — aperture/iris circular reveal
+       ============================================================ */
+    .curator {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+    .curator.in { opacity: 1; }
+    .curator-portrait {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 3/4;
+        background: #0a0a0a;
+    }
+    .curator-portrait img {
+        width: 100%; height: 100%; object-fit: cover;
+        clip-path: circle(0% at 50% 50%);
+        transform: scale(1.15);
+        transition: clip-path 1.2s cubic-bezier(0.22,1,0.36,1),
+                    transform 1.6s cubic-bezier(0.22,1,0.36,1);
+        filter: grayscale(0.4);
+    }
+    .curator.in .curator-portrait img {
+        clip-path: circle(75% at 50% 50%);
+        transform: scale(1);
+    }
+    .curator-portrait:hover img { filter: grayscale(0); }
+    .curator-name {
+        opacity: 0; transform: translateY(12px);
+        transition: opacity 0.7s ease 0.6s, transform 0.7s cubic-bezier(0.22,1,0.36,1) 0.6s;
+    }
+    .curator.in .curator-name { opacity: 1; transform: translateY(0); }
+    .curator-role {
+        opacity: 0;
+        transition: opacity 0.6s ease 0.85s;
+    }
+    .curator.in .curator-role { opacity: 1; }
+
+    /* ============================================================
+       SECTION · IN THE PRESS — words slide from alternating sides
+       ============================================================ */
+    .press-quote {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+    .press-quote.in { opacity: 1; }
+    .press-word {
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1);
+    }
+    .press-word.even { transform: translateX(-30px); }
+    .press-word.odd  { transform: translateX(30px); }
+    .press-quote.in .press-word {
+        opacity: 1; transform: translateX(0);
+    }
+    .press-attr {
+        opacity: 0;
+        transition: opacity 0.5s ease 0.6s;
+    }
+    .press-quote.in .press-attr { opacity: 1; }
+    .press-divider {
+        height: 1px; width: 0;
+        background: #0a0a0a;
+        margin: 4rem auto;
+        transition: width 1.4s cubic-bezier(0.22,1,0.36,1);
+    }
+    .press-divider.in { width: 60%; }
+
+    /* ============================================================
+       SECTION · VOLUMES — 3D book cover tilt + page reveal on click
+       ============================================================ */
+    .volume-book-wrap {
+        perspective: 1600px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .volume-book {
+        position: relative;
+        width: min(280px, 70vw);
+        aspect-ratio: 2/3;
+        transform-style: preserve-3d;
+        transform: rotateY(-22deg) rotateX(6deg);
+        transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);
+        cursor: pointer;
+    }
+    .volume-book-wrap:hover .volume-book {
+        transform: rotateY(-12deg) rotateX(2deg);
+    }
+    .volume-book.opened {
+        transform: rotateY(-65deg) rotateX(2deg);
+    }
+    .volume-cover {
+        position: absolute; inset: 0;
+        background: linear-gradient(135deg, #1c1b1b 0%, #0a0a0a 60%, #1c1b1b 100%);
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow:
+            0 25px 60px rgba(0,0,0,0.55),
+            -20px 0 40px rgba(0,0,0,0.4);
+        padding: 2.5rem 1.75rem;
+        display: flex; flex-direction: column; justify-content: space-between;
+        transform: translateZ(8px);
+        transform-origin: left center;
+        transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);
+        z-index: 2;
+        overflow: hidden;
+    }
+    .volume-book.opened .volume-cover {
+        transform: translateZ(8px) rotateY(-160deg);
+    }
+    .volume-cover::before {
+        content: "";
+        position: absolute; left: 0; top: 0; bottom: 0; width: 12px;
+        background: linear-gradient(90deg,
+            rgba(255,255,255,0.08) 0%,
+            rgba(0,0,0,0.5) 60%,
+            transparent 100%);
+        z-index: 1;
+    }
+    .volume-cover-inner {
+        position: relative; z-index: 2;
+        display: flex; flex-direction: column; justify-content: space-between;
+        height: 100%;
+    }
+    .volume-spine-text {
+        position: absolute; left: 8px; top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: left center;
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        color: rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        white-space: nowrap;
+        z-index: 3;
+    }
+    .volume-pages {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, #f5f1e8 0%, #ddd6c4 100%);
+        border: 1px solid rgba(0,0,0,0.1);
+        padding: 2.5rem 1.75rem;
+        color: #1c1b1b;
+        z-index: 1;
+        display: flex; flex-direction: column; justify-content: center;
+    }
+    .volume-book:not(.opened) .volume-pages { opacity: 0; }
+    .volume-book.opened .volume-pages { opacity: 1; transition: opacity 0.6s ease 0.4s; }
+
+    /* ============================================================
+       Dark-context overrides (light theme)
+       Elements that sit on dark images / dark overlays keep light text
+       regardless of the page theme. Force colors here so Tailwind utility
+       classes inside these wrappers don't pick up the dark on-surface tokens.
+       ============================================================ */
+    .card-base-info, .card-base-info * ,
+    .card-meta,       .card-meta *,
+    .amenity-content, .amenity-content *,
+    .material-meta,   .material-meta *,
+    .film-section,    .film-section *,
+    .volume-cover,    .volume-cover * {
+        color: #e2e2e2 !important;
+    }
+    .card-base-info .text-on-surface-variant,
+    .card-meta .text-on-surface-variant,
+    .amenity-content .text-on-surface-variant,
+    .material-meta .text-on-surface-variant,
+    .volume-cover .text-on-surface-variant {
+        color: #c4c7c7 !important;
+    }
+    .card-base-info .text-tertiary,
+    .card-meta .text-tertiary,
+    .amenity-content .text-tertiary,
+    .material-meta .text-tertiary,
+    .film-section .text-tertiary,
+    .volume-cover .text-tertiary {
+        color: #ffffff !important;
+    }
+    .card-meta a { border-color: #ffffff !important; }
+    /* The film-close button sits in a dark modal */
+    .film-modal, .film-modal * { color: #ffffff !important; }
+
+    /* ===== Reduced motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+        .letterbox { display: none; }
+        .hero-img { filter: none !important; transform: none !important; }
+        .title-card { opacity: 1 !important; transform: none !important; }
+        .slat-reveal > .slat { display: none; }
+        .caption-block { opacity: 1 !important; }
+        .material-card::after { display: none; }
+        .curator-portrait img { clip-path: circle(75% at 50% 50%) !important; transform: none !important; filter: none !important; }
+        .volume-book { transform: none !important; }
+        /* Force-visible state for animations gated behind GSAP */
+        .atelier-line::after { height: 100% !important; }
+        .atelier-item::before { transform: scale(1) !important; }
+        .atelier-coord, .atelier-name { opacity: 1 !important; transform: none !important; }
+        .curator, .curator-name, .curator-role { opacity: 1 !important; transform: none !important; }
+        .press-quote, .press-word, .press-attr { opacity: 1 !important; transform: none !important; }
+        .press-divider { width: 60% !important; }
+        .cursor-dot, .cursor-ring { display: none !important; }
+        .gallery-stack > img:first-of-type { opacity: 1 !important; }
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-tertiary selection:text-on-tertiary">
+
+<!-- Custom cursor -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Letterbox cinematic bars -->
+<div class="letterbox top" aria-hidden="true"></div>
+<div class="letterbox bottom" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-2xl border-b border-black/5" aria-label="Primary">
+    <div class="nav-row flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+        <a href="#" class="font-display-lg text-headline-md tracking-tighter text-on-surface" aria-label="Aetheris — Home">AETHERIS</a>
+        <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+            <a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-500" href="#philosophy">Portfolio</a>
+            <a class="font-label-lg text-label-lg uppercase tracking-widest text-primary border-b border-primary pb-1" href="#residences">Residences</a>
+            <a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-500" href="#residences">Estates</a>
+            <a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-500" href="#editorial">Journal</a>
+            <a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-500" href="#amenities">Curation</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="magnetic-btn hidden md:inline-flex font-label-lg text-label-lg uppercase tracking-widest bg-tertiary text-on-tertiary px-8 py-3 transition-colors duration-500 hover:bg-white hover:text-black">Inquire</button>
+            <button id="menu-btn" class="material-symbols-outlined text-on-surface hover:text-primary transition-colors md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface pt-32 px-margin-mobile md:hidden" aria-hidden="true">
+    <div class="flex flex-col gap-8">
+        <a class="font-display-lg text-3xl text-on-surface" href="#philosophy">Portfolio</a>
+        <a class="font-display-lg text-3xl text-on-surface" href="#residences">Residences</a>
+        <a class="font-display-lg text-3xl text-on-surface" href="#residences">Estates</a>
+        <a class="font-display-lg text-3xl text-on-surface" href="#editorial">Journal</a>
+        <a class="font-display-lg text-3xl text-on-surface" href="#amenities">Curation</a>
+        <span class="block w-12 h-px bg-tertiary mt-8"></span>
+        <a class="font-label-lg text-label-lg uppercase tracking-widest text-tertiary" href="#inquire">Begin Inquiry</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="hero-section relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <img class="hero-img w-full h-full object-cover" alt="A cinematic dusk view of a luxury villa terraced into a coastal cliff, with warm amber interior light glowing against deep blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-Jqr4gA5LXRzHZroccHmHJZ0FcP4AQ5fVwGUbB4lxvyebHUtWk15ghdWgbgzXzMcngNtQQ5jmCKhcXHXFSlPs7GSRCRz2h0tW2EkN6tB4kdjxGv7Kb6Wb6yvPO5Z30rAk_bsLd5fvcOvVXHLS7fP06sz_1oVqwTm9ztIKohJJsJVivTQU_Ximu_ISmxvZf0iGbnD-vbZOjzEzUokklces3SZ0_rBFYtqSOkkR-XL929JhytMLVejslm9q0JW7Gy2MdclWVM2Lyk"/>
+        <div class="grid-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/55"></div>
+    </div>
+    <div class="relative z-10 text-center px-margin-mobile max-w-5xl">
+        <h1 class="title-card font-display-xl text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.05] text-glow mb-6 text-white">THE PINNACLE OF<br/>MODERN LIVING</h1>
+        <p class="hero-fade font-label-lg text-label-lg uppercase tracking-[0.4em] text-white/90">Defining the Future of Architectural Exclusivity</p>
+    </div>
+    <div class="hero-fade hero-cue absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 text-white">
+        <span class="material-symbols-outlined text-2xl">expand_more</span>
+        <span class="font-label-md text-[10px] tracking-[0.4em] uppercase text-white/80">Enter</span>
+    </div>
+</header>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <div class="md:col-span-5">
+        <h2 class="reveal-up font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] mb-8 leading-tight">A Sanctuary of Quiet Luxury</h2>
+    </div>
+    <div class="md:col-span-7">
+        <p class="reveal-up font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl">
+            Aetheris is not merely a developer; it is a curator of light, space, and silence. Our philosophy is rooted in the "Cinematic Architecture" movement — creating environments that feel like curated artifacts, where every view is a framed masterpiece.
+        </p>
+        <div class="fine-line mb-12"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8" data-stagger>
+            <div data-stagger-item>
+                <span class="font-label-lg text-label-lg text-tertiary block mb-2">Precision</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Technical rigor meets emotional depth in every structural detail.</p>
+            </div>
+            <div data-stagger-item>
+                <span class="font-label-lg text-label-lg text-tertiary block mb-2">Tranquility</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">Spaces designed to evoke a sense of calm and absolute confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED RESIDENCES -->
+<section id="residences" class="bg-surface-container-lowest py-32 overflow-hidden">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-16 flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+        <div class="reveal-up">
+            <span class="font-label-md text-label-md text-tertiary tracking-widest block mb-4 uppercase">Featured Collection</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)]">Curation I: The Heights</h2>
+        </div>
+        <div class="hidden md:flex space-x-4 self-end" id="residences-controls">
+            <button id="res-prev" class="w-14 h-14 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-colors duration-500" aria-label="Previous residence">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button id="res-next" class="w-14 h-14 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-surface transition-colors duration-500" aria-label="Next residence">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+    <div id="residences-track" class="flex gap-8 px-margin-mobile md:px-margin-desktop overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+        <article class="residence-card flex-none w-[85vw] md:w-[60vw] snap-start">
+            <div class="slat-reveal aspect-[16/9] mb-6">
+                <img class="card-image w-full h-full object-cover" alt="The Obsidian Suite — a low-lit modern penthouse with floor-to-ceiling windows overlooking a harbour at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbff3usRJjdbDVbG7snM7kuIi-hb_NnhiBSSvtsdJPC_xlfWIalHMWip2AsMgPFXMwUgUDrJ60TmGmenUn38dxzvUvUIeUuQtgYVNEMTbIaHs1oqSXS4YK1vwNxYeCf0DWcWNqv966bA8kqclVeQ6522jET7zZcT3KgSSxUolhCPc3i68lLbMVhgnv-goN7HJluJXydXb6hPZqfwwCgjqjFbFIOdzmfsaxYLOLTgQfsJklVXWX3gNuvvxT5ikcoMFowjKY-pRbhss"/>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <div class="card-base-info">
+                    <p class="font-label-lg text-label-lg tracking-widest mb-1">The Obsidian Suite</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">7,400 sq ft · Dubai Creek Harbour</p>
+                </div>
+                <div class="card-meta">
+                    <span class="coord-tag">25.1972° N · 55.2744° E</span>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Status</p>
+                    <p class="font-label-lg text-label-lg text-on-surface">Available — Q4 2026</p>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mt-4">Materials</p>
+                    <p class="font-body-md text-body-md text-on-surface">Travertine · Smoked Oak · Bronze</p>
+                    <a href="#inquire" class="mt-6 inline-block font-label-lg text-label-lg uppercase tracking-widest text-tertiary border-b border-tertiary pb-1 self-start">Request Dossier →</a>
+                </div>
+            </div>
+        </article>
+        <article class="residence-card flex-none w-[85vw] md:w-[60vw] snap-start">
+            <div class="slat-reveal aspect-[16/9] mb-6">
+                <img class="card-image w-full h-full object-cover" alt="The Monolith House — a brutalist villa with cantilevered concrete forms set in a snowy Icelandic landscape at blue hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCqfc4iPPJzLDVrn_VrS5Bo7cD11Cg6m_ZRCyuEfNPZuRCGZHBDGARsgL2yEYp3UVNx_5FJPb1HnoqZoVUW1k94tGUn96W4lnmSEhHx8vuXUcLN6vN8JShg8YGD3PwAMfx813pT2Znf7BU-0Gk0zMs82a-PzgqQAfFbl-HGhzfEimgFm5AqAYD95CfLsVY61_8KDwXP6XyCFWXqYN6ePHxHvHtdrLekGkMoU2eZXKWSejDqQGZgytRbNrQcZvzxucTQMpSmt53kc"/>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <div class="card-base-info">
+                    <p class="font-label-lg text-label-lg tracking-widest mb-1">The Monolith House</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">5,200 sq ft · Reykjavík</p>
+                </div>
+                <div class="card-meta">
+                    <span class="coord-tag">64.1466° N · 21.9426° W</span>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Status</p>
+                    <p class="font-label-lg text-label-lg text-on-surface">By Private Tour</p>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mt-4">Materials</p>
+                    <p class="font-body-md text-body-md text-on-surface">Board-formed Concrete · Black Steel · Basalt</p>
+                    <a href="#inquire" class="mt-6 inline-block font-label-lg text-label-lg uppercase tracking-widest text-tertiary border-b border-tertiary pb-1 self-start">Request Dossier →</a>
+                </div>
+            </div>
+        </article>
+        <article class="residence-card flex-none w-[85vw] md:w-[60vw] snap-start">
+            <div class="slat-reveal aspect-[16/9] mb-6">
+                <img class="card-image w-full h-full object-cover" alt="A cinematic drone view of a modern coastal mansion at night, with a glowing turquoise pool reflecting the minimalist white structure against a dark sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9_BcfwsNoeLE0GMgoJ0NYQ07dxWgjQMUNseSJ0hlcC5CAbNQmDeW5k-iwEcCucQLYrvSftcJQ54eQSKGdyjcfOLtkyhLc1srDEIm_GREGlYZW74JcwaEDpBwgKbqSKxfHQHeI1Bu6jaDkiB8e9JCEzSbQ4kpKzZDT0gciSXBrD4Qe4Lt_nS8woYvzfwOfeycwPdcXVx_8OlSGzyGoCglkDyAPw0eYm1Aq3L2ZJIuqIZsVJILX5z__7dXbIlGLoZU1qMt_W1-YUU"/>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <div class="card-base-info">
+                    <p class="font-label-lg text-label-lg tracking-widest mb-1">The Pacific Pavilion</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">9,800 sq ft · Big Sur Coast</p>
+                </div>
+                <div class="card-meta">
+                    <span class="coord-tag">36.2704° N · 121.8081° W</span>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Status</p>
+                    <p class="font-label-lg text-label-lg text-on-surface">Reserved — Inquire</p>
+                    <p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mt-4">Materials</p>
+                    <p class="font-body-md text-body-md text-on-surface">Limestone · Cedar · Patinated Bronze</p>
+                    <a href="#inquire" class="mt-6 inline-block font-label-lg text-label-lg uppercase tracking-widest text-tertiary border-b border-tertiary pb-1 self-start">Request Dossier →</a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ARCHITECTURAL GALLERY — Awwwards anchor: pinned scroll-scrub with image crossfade -->
+<section id="gallery" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-max-width mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div class="order-2 md:order-1 sticky-photo-wrap">
+                <div class="sticky-photo slat-reveal aspect-[4/5]" id="gallery-stack-wrap">
+                    <div class="gallery-stack" data-gallery-stack>
+                        <img class="is-active" alt="A detail of a brutalist concrete spiral staircase with light cascading through structural apertures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhUXrYbBpXDWDrthjKUeD8vTb737vSS4h5J9DPNQcFmmYxofXWVf-qOwz5SjYvgpluAzNdgEZasdWXTh4vFiJm0J8s3aZMgW1RqPran6NBbikQ3GYbf4rcIQyP4rCXZasuZkOPRkyNZPa5gIW0pLKb3rkbpimIjFaP9FpuHqD8rX8E_4caqGEgf8rTxtpXECNuJ12ZZXK_MmwxlK3GZ6hdduNKToTQhhphHSUiXHDjhPR9w-p04lvkaPknCzkAdw85leXxH_-AsuQ"/>
+                        <img alt="A detail of structural apertures in a concrete wall casting sharp linear shadows across a smoked oak floor at midday" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbff3usRJjdbDVbG7snM7kuIi-hb_NnhiBSSvtsdJPC_xlfWIalHMWip2AsMgPFXMwUgUDrJ60TmGmenUn38dxzvUvUIeUuQtgYVNEMTbIaHs1oqSXS4YK1vwNxYeCf0DWcWNqv966bA8kqclVeQ6522jET7zZcT3KgSSxUolhCPc3i68lLbMVhgnv-goN7HJluJXydXb6hPZqfwwCgjqjFbFIOdzmfsaxYLOLTgQfsJklVXWX3gNuvvxT5ikcoMFowjKY-pRbhss"/>
+                        <img alt="A double-height interior detail in board-formed concrete and smoked oak, tuned for acoustic clarity, with raking late-afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCqfc4iPPJzLDVrn_VrS5Bo7cD11Cg6m_ZRCyuEfNPZuRCGZHBDGARsgL2yEYp3UVNx_5FJPb1HnoqZoVUW1k94tGUn96W4lnmSEhHx8vuXUcLN6vN8JShg8YGD3PwAMfx813pT2Znf7BU-0Gk0zMs82a-PzgqQAfFbl-HGhzfEimgFm5AqAYD95CfLsVY61_8KDwXP6XyCFWXqYN6ePHxHvHtdrLekGkMoU2eZXKWSejDqQGZgytRbNrQcZvzxucTQMpSmt53kc"/>
+                    </div>
+                    <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                    <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 md:min-h-[160vh] flex flex-col justify-around gap-24">
+                <h3 class="reveal-up font-display-lg text-[clamp(2rem,4.5vw,3rem)] leading-tight">Technical Rigor,<br/><span class="text-tertiary font-normal">Visual Poetry.</span></h3>
+                <div class="caption-block" data-caption="1" data-gallery-caption="0">
+                    <span class="material-symbols-outlined text-tertiary text-4xl mb-6 block">architecture</span>
+                    <h4 class="font-label-lg text-label-lg mb-3 tracking-widest">Bespoke Materials</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Hand-picked Travertine and custom-blackened steel palettes curated for timelessness, sourced from a single seam in the quarry.</p>
+                </div>
+                <div class="caption-block" data-caption="2" data-gallery-caption="1">
+                    <span class="material-symbols-outlined text-tertiary text-4xl mb-6 block">light_mode</span>
+                    <h4 class="font-label-lg text-label-lg mb-3 tracking-widest">Dynamic Lighting</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Structural apertures designed to track the sun's path, creating living shadows that pass through every room over the course of a day.</p>
+                </div>
+                <div class="caption-block" data-caption="3" data-gallery-caption="2">
+                    <span class="material-symbols-outlined text-tertiary text-4xl mb-6 block">straighten</span>
+                    <h4 class="font-label-lg text-label-lg mb-3 tracking-widest">Acoustic Engineering</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Every primary space is tuned to a measurable reverberation time, with materials and proportions selected for silence as much as for sight.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- THE ATELIER (Studio + Global Locations) -->
+<section id="atelier" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start">
+        <div class="md:col-span-5 reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-6">The Atelier</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] mb-10 leading-[1.05]">Four studios.<br/>One sensibility.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-md">
+                Each Aetheris studio operates as a self-contained atelier — geographically rooted, materially attuned to its place, and connected by a shared editorial discipline.
+            </p>
+            <div class="relative aspect-[4/5] slat-reveal">
+                <img class="w-full h-full object-cover" alt="A wide editorial photograph of the Aetheris atelier interior — long oak drafting tables, hand-built physical models, and floor-to-ceiling north-facing windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZJ2QmXOVA7snYpcKhm8r6ZmqN0T43-EujQ8BwiWqbx1pC5Dj8cnF_lTCpnOhiGgXytGWeMfyUtPb0H0UStXMdEd1OUBrt2TAzS0K6Tj8WfxXrQPUTOWBzRd0MkCsJBkHxpaR2dl6U26fmgcmXOZREi0xs3EpuQFQRTMd1x8QSUJrbWluUfAzcR2-byQ5FK9zp1hIimffRUawPia-qYNfyC4k5cRNsAKqbROoNawHhN3t2NU0KoRARUcGAEa7DwPozfQiKHjY-hGI"/>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+                <span class="slat"></span><span class="slat"></span><span class="slat"></span>
+            </div>
+        </div>
+        <div class="md:col-span-6 md:col-start-7">
+            <div class="atelier-locations">
+                <span class="atelier-line" aria-hidden="true"></span>
+                <div class="atelier-item" data-atelier>
+                    <p class="atelier-coord">47.3769° N · 08.5417° E</p>
+                    <h3 class="atelier-name font-display-lg text-headline-md mt-2">Zurich</h3>
+                    <p class="atelier-name font-body-md text-on-surface-variant mt-3 max-w-md">Global headquarters. Atelier I — original studio, opened 2009. Anchored in the editorial language of the Bauhaus and the precision of Swiss engineering.</p>
+                </div>
+                <div class="atelier-item" data-atelier>
+                    <p class="atelier-coord">35.6762° N · 139.6503° E</p>
+                    <h3 class="atelier-name font-display-lg text-headline-md mt-2">Tokyo</h3>
+                    <p class="atelier-name font-body-md text-on-surface-variant mt-3 max-w-md">Atelier II — opened 2014 in collaboration with master craftsman Hiro Nakamura. Specialises in joinery, timber, and the discipline of restraint.</p>
+                </div>
+                <div class="atelier-item" data-atelier>
+                    <p class="atelier-coord">40.7128° N · 74.0060° W</p>
+                    <h3 class="atelier-name font-display-lg text-headline-md mt-2">New York</h3>
+                    <p class="atelier-name font-body-md text-on-surface-variant mt-3 max-w-md">Atelier III — opened 2019 as our urban practice. Focused on the rare conversion of pre-war structures into private contemporary residences.</p>
+                </div>
+                <div class="atelier-item" data-atelier>
+                    <p class="atelier-coord">25.2048° N · 55.2708° E</p>
+                    <h3 class="atelier-name font-display-lg text-headline-md mt-2">Dubai</h3>
+                    <p class="atelier-name font-body-md text-on-surface-variant mt-3 max-w-md">Atelier IV — opened 2024. Engineered for the desert: passive cooling, radiant shade structures, and the geometry of light.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AMENITIES BENTO -->
+<section id="amenities" class="bg-surface-container py-20 md:py-40">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+        <div class="text-center mb-24 reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-4">The Lifestyle</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)]">Refined Conveniences</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-8 md:h-[600px]" data-stagger>
+            <article class="amenity-tile md:col-span-2 md:row-span-2 group" data-stagger-item>
+                <img class="amenity-img" alt="A glowing turquoise infinity pool extending to the horizon at night, set against a minimalist coastal villa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9_BcfwsNoeLE0GMgoJ0NYQ07dxWgjQMUNseSJ0hlcC5CAbNQmDeW5k-iwEcCucQLYrvSftcJQ54eQSKGdyjcfOLtkyhLc1srDEIm_GREGlYZW74JcwaEDpBwgKbqSKxfHQHeI1Bu6jaDkiB8e9JCEzSbQ4kpKzZDT0gciSXBrD4Qe4Lt_nS8woYvzfwOfeycwPdcXVx_8OlSGzyGoCglkDyAPw0eYm1Aq3L2ZJIuqIZsVJILX5z__7dXbIlGLoZU1qMt_W1-YUU"/>
+                <div class="amenity-overlay"></div>
+                <div class="amenity-content p-12">
+                    <span class="material-symbols-outlined text-tertiary text-[48px] mb-6 font-thin">pool</span>
+                    <h3 class="font-display-lg text-headline-md mb-4">Infinite Horizon Pools</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Seamless integration between water and landscape.</p>
+                </div>
+            </article>
+            <article class="amenity-tile group" data-stagger-item>
+                <img class="amenity-img" alt="A brutalist concrete spiral staircase lit by soft daylight evoking a calm wellness sanctuary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhUXrYbBpXDWDrthjKUeD8vTb737vSS4h5J9DPNQcFmmYxofXWVf-qOwz5SjYvgpluAzNdgEZasdWXTh4vFiJm0J8s3aZMgW1RqPran6NBbikQ3GYbf4rcIQyP4rCXZasuZkOPRkyNZPa5gIW0pLKb3rkbpimIjFaP9FpuHqD8rX8E_4caqGEgf8rTxtpXECNuJ12ZZXK_MmwxlK3GZ6hdduNKToTQhhphHSUiXHDjhPR9w-p04lvkaPknCzkAdw85leXxH_-AsuQ"/>
+                <div class="amenity-overlay"></div>
+                <div class="amenity-content p-10">
+                    <span class="material-symbols-outlined text-tertiary text-headline-md">spa</span>
+                    <div>
+                        <h3 class="font-label-lg text-label-lg mb-2 tracking-widest">Wellness Spa</h3>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Private therapy chambers.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="amenity-tile group" data-stagger-item>
+                <img class="amenity-img" alt="A dimly lit cantilevered concrete interior of a brutalist villa, evoking a climate-controlled wine vault" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCqfc4iPPJzLDVrn_VrS5Bo7cD11Cg6m_ZRCyuEfNPZuRCGZHBDGARsgL2yEYp3UVNx_5FJPb1HnoqZoVUW1k94tGUn96W4lnmSEhHx8vuXUcLN6vN8JShg8YGD3PwAMfx813pT2Znf7BU-0Gk0zMs82a-PzgqQAfFbl-HGhzfEimgFm5AqAYD95CfLsVY61_8KDwXP6XyCFWXqYN6ePHxHvHtdrLekGkMoU2eZXKWSejDqQGZgytRbNrQcZvzxucTQMpSmt53kc"/>
+                <div class="amenity-overlay"></div>
+                <div class="amenity-content p-10">
+                    <span class="material-symbols-outlined text-tertiary text-headline-md">wine_bar</span>
+                    <div>
+                        <h3 class="font-label-lg text-label-lg mb-2 tracking-widest">Sommelier Vaults</h3>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Climate-controlled reserves.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="amenity-tile md:col-span-2 group" data-stagger-item>
+                <img class="amenity-img" alt="A low-lit modern penthouse interior with floor-to-ceiling windows overlooking a harbour at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbff3usRJjdbDVbG7snM7kuIi-hb_NnhiBSSvtsdJPC_xlfWIalHMWip2AsMgPFXMwUgUDrJ60TmGmenUn38dxzvUvUIeUuQtgYVNEMTbIaHs1oqSXS4YK1vwNxYeCf0DWcWNqv966bA8kqclVeQ6522jET7zZcT3KgSSxUolhCPc3i68lLbMVhgnv-goN7HJluJXydXb6hPZqfwwCgjqjFbFIOdzmfsaxYLOLTgQfsJklVXWX3gNuvvxT5ikcoMFowjKY-pRbhss"/>
+                <div class="amenity-overlay"></div>
+                <div class="amenity-content p-10 items-center text-center">
+                    <span class="material-symbols-outlined text-tertiary text-headline-md mb-4">concierge</span>
+                    <h3 class="font-label-lg text-label-lg mb-2 tracking-widest">24/7 White-Glove Concierge</h3>
+                    <p class="font-label-md text-label-md text-on-surface-variant max-w-xs">Unobtrusive assistance for an unburdened life.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- MATERIALS & PROVENANCE -->
+<section id="materials" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-max-width mx-auto">
+        <div class="mb-12 md:mb-24 max-w-3xl reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-6">Materials &amp; Provenance</span>
+            <h2 class="font-display-lg text-[clamp(1.875rem,5vw,3.5rem)] mb-6 md:mb-8 leading-[1.05]">The honesty of raw materials, sourced at the source.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Every Aetheris residence is composed of a curated palette of natural materials, each documented with a verified provenance certificate.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter" data-stagger>
+            <article class="material-card" data-material data-stagger-item>
+                <div class="material-img-wrap"><img class="material-img" alt="A close-up of warm Travertine stone showing natural pitting and horizontal banding under raking morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhUXrYbBpXDWDrthjKUeD8vTb737vSS4h5J9DPNQcFmmYxofXWVf-qOwz5SjYvgpluAzNdgEZasdWXTh4vFiJm0J8s3aZMgW1RqPran6NBbikQ3GYbf4rcIQyP4rCXZasuZkOPRkyNZPa5gIW0pLKb3rkbpimIjFaP9FpuHqD8rX8E_4caqGEgf8rTxtpXECNuJ12ZZXK_MmwxlK3GZ6hdduNKToTQhhphHSUiXHDjhPR9w-p04lvkaPknCzkAdw85leXxH_-AsuQ"/></div>
+                <div class="material-meta">
+                    <p class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">01 · Stone</p>
+                    <h3 class="font-display-lg text-headline-md mb-3">Travertine</h3>
+                    <div class="material-detail">
+                        <p class="font-body-md text-body-md text-on-surface-variant">Cut from the Tivoli quarries outside Rome. Hand-honed in our Zurich finishing workshop.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="material-card" data-material data-stagger-item>
+                <div class="material-img-wrap"><img class="material-img" alt="A close-up of dark smoked oak floorboards revealing the deep tonal variation, open grain and faint silver fleck pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbff3usRJjdbDVbG7snM7kuIi-hb_NnhiBSSvtsdJPC_xlfWIalHMWip2AsMgPFXMwUgUDrJ60TmGmenUn38dxzvUvUIeUuQtgYVNEMTbIaHs1oqSXS4YK1vwNxYeCf0DWcWNqv966bA8kqclVeQ6522jET7zZcT3KgSSxUolhCPc3i68lLbMVhgnv-goN7HJluJXydXb6hPZqfwwCgjqjFbFIOdzmfsaxYLOLTgQfsJklVXWX3gNuvvxT5ikcoMFowjKY-pRbhss"/></div>
+                <div class="material-meta">
+                    <p class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">02 · Timber</p>
+                    <h3 class="font-display-lg text-headline-md mb-3">Smoked Oak</h3>
+                    <div class="material-detail">
+                        <p class="font-body-md text-body-md text-on-surface-variant">Slow-smoked over white-oak chips in our Tokyo atelier. Hand-finished with raw linseed oil.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="material-card" data-material data-stagger-item>
+                <div class="material-img-wrap"><img class="material-img" alt="A close-up of patinated bronze hardware showing oxidised verdigris highlights against a dark burnished finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCqfc4iPPJzLDVrn_VrS5Bo7cD11Cg6m_ZRCyuEfNPZuRCGZHBDGARsgL2yEYp3UVNx_5FJPb1HnoqZoVUW1k94tGUn96W4lnmSEhHx8vuXUcLN6vN8JShg8YGD3PwAMfx813pT2Znf7BU-0Gk0zMs82a-PzgqQAfFbl-HGhzfEimgFm5AqAYD95CfLsVY61_8KDwXP6XyCFWXqYN6ePHxHvHtdrLekGkMoU2eZXKWSejDqQGZgytRbNrQcZvzxucTQMpSmt53kc"/></div>
+                <div class="material-meta">
+                    <p class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">03 · Metal</p>
+                    <h3 class="font-display-lg text-headline-md mb-3">Patinated Bronze</h3>
+                    <div class="material-detail">
+                        <p class="font-body-md text-body-md text-on-surface-variant">Cast at a single foundry in Bologna. Aged for 90 days outdoors before final installation.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="material-card" data-material data-stagger-item>
+                <div class="material-img-wrap"><img class="material-img" alt="A close-up of brushed linen-weave glass showing a soft frosted surface texture that diffuses ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-Jqr4gA5LXRzHZroccHmHJZ0FcP4AQ5fVwGUbB4lxvyebHUtWk15ghdWgbgzXzMcngNtQQ5jmCKhcXHXFSlPs7GSRCRz2h0tW2EkN6tB4kdjxGv7Kb6Wb6yvPO5Z30rAk_bsLd5fvcOvVXHLS7fP06sz_1oVqwTm9ztIKohJJsJVivTQU_Ximu_ISmxvZf0iGbnD-vbZOjzEzUokklces3SZ0_rBFYtqSOkkR-XL929JhytMLVejslm9q0JW7Gy2MdclWVM2Lyk"/></div>
+                <div class="material-meta">
+                    <p class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">04 · Glass</p>
+                    <h3 class="font-display-lg text-headline-md mb-3">Linen Glass</h3>
+                    <div class="material-detail">
+                        <p class="font-body-md text-body-md text-on-surface-variant">A brushed-linen weave glass produced by a single family-run furnace in Murano since 1894.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- THE CURATORS -->
+<section id="curators" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+    <div class="max-w-max-width mx-auto">
+        <div class="mb-24 max-w-3xl reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-6">The Curators</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] mb-8 leading-[1.05]">Three architects.<br/>One disciplined vision.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Our principal architects each lead one practice line. They are listed below not by hierarchy, but by the discipline of their craft.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <article class="curator" data-curator>
+                <div class="curator-portrait mb-6">
+                    <img alt="An editorial portrait of architect Elena Müller — black turtleneck, soft side lighting, looking off camera against a charcoal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBziUo4i7igPaoKW_Q5eJd2oullYL4BbH2LukNH5jxWt-zu7g5s8XhTzraJMP8Ji9wM-poeeaAFzlKpPS4XABZOJo-8l2QYtRhYH_sNBZW5EgkwW8OHcsUVLq8hPc-pNoGivvxKdDe0RVVi4Fh6aiKqySggh4C8T7D4vnnG7umv3pMxMsat0TItJUMdsHZ7hJ6YOEbM_7Hl3I9O_mzr_voj-LEtRYqEbnmlK3Hztgr6dkDltMOQtoJ0J_Y1pEZcUml3rvLQvEtoqtI"/>
+                </div>
+                <p class="curator-role font-label-md text-label-md text-tertiary uppercase tracking-widest mb-3">Founding Partner</p>
+                <h3 class="curator-name font-display-lg text-headline-md mb-2">Elena Müller</h3>
+                <p class="curator-name font-body-md text-body-md text-on-surface-variant">Zurich Atelier · 24 years of practice. ETH Zürich, 2001. Co-author, "Light as Material" (Lars Müller, 2018).</p>
+            </article>
+            <article class="curator" data-curator>
+                <div class="curator-portrait mb-6">
+                    <img alt="An editorial portrait of architect Hiro Nakamura — minimalist studio setting with raw concrete wall, side lighting, contemplative pose" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhUXrYbBpXDWDrthjKUeD8vTb737vSS4h5J9DPNQcFmmYxofXWVf-qOwz5SjYvgpluAzNdgEZasdWXTh4vFiJm0J8s3aZMgW1RqPran6NBbikQ3GYbf4rcIQyP4rCXZasuZkOPRkyNZPa5gIW0pLKb3rkbpimIjFaP9FpuHqD8rX8E_4caqGEgf8rTxtpXECNuJ12ZZXK_MmwxlK3GZ6hdduNKToTQhhphHSUiXHDjhPR9w-p04lvkaPknCzkAdw85leXxH_-AsuQ"/>
+                </div>
+                <p class="curator-role font-label-md text-label-md text-tertiary uppercase tracking-widest mb-3">Principal · Joinery</p>
+                <h3 class="curator-name font-display-lg text-headline-md mb-2">Hiro Nakamura</h3>
+                <p class="curator-name font-body-md text-body-md text-on-surface-variant">Tokyo Atelier · 18 years of practice. Apprentice to Tadao Ando, 2007–2011. Specialist in traditional joinery.</p>
+            </article>
+            <article class="curator" data-curator>
+                <div class="curator-portrait mb-6">
+                    <img alt="An editorial portrait of architect Marcus Vance — quiet posture in a sunlit gallery space with travertine flooring and a single olive tree visible behind" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboBz6jLDsa-aCv-Cto4NkJSrncS1gIBSfLiU6cRz04gXEp6ZsAxVc3FTuY-PgVf4ahOW-vVhT5854cLs36NZvSm0KhV29HJIIb8eU0X4FelATpGu8BUM-vr030j-WPEvPCzz5JC-eAjg3ZFsjg0CmEeYiT9kn-GSftAyewAf0dVsBpF6k0uk4SyAsqzz-kuFYUdJSZ073ggTW7UkC1XtikS5cu_W-vYYY-VaeJmIiYyhLFlpllH46kFMDX92fh17X7QoZcd9h-PQ"/>
+                </div>
+                <p class="curator-role font-label-md text-label-md text-tertiary uppercase tracking-widest mb-3">Partner · Urban</p>
+                <h3 class="curator-name font-display-lg text-headline-md mb-2">Marcus Vance</h3>
+                <p class="curator-name font-body-md text-body-md text-on-surface-variant">New York Atelier · 15 years of practice. Columbia GSAPP, 2010. Focus on contemporary conversion of pre-war landmarks.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO TOUR -->
+<section id="editorial" class="film-section relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+    <video id="film-bg" class="absolute inset-0 w-full h-full object-cover"
+           autoplay muted loop playsinline preload="metadata"
+           poster="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9_BcfwsNoeLE0GMgoJ0NYQ07dxWgjQMUNseSJ0hlcC5CAbNQmDeW5k-iwEcCucQLYrvSftcJQ54eQSKGdyjcfOLtkyhLc1srDEIm_GREGlYZW74JcwaEDpBwgKbqSKxfHQHeI1Bu6jaDkiB8e9JCEzSbQ4kpKzZDT0gciSXBrD4Qe4Lt_nS8woYvzfwOfeycwPdcXVx_8OlSGzyGoCglkDyAPw0eYm1Aq3L2ZJIuqIZsVJILX5z__7dXbIlGLoZU1qMt_W1-YUU"
+           aria-label="Ambient cinematic loop of an Aetheris residence">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4"/>
+    </video>
+    <div class="absolute inset-0 film-grade pointer-events-none"></div>
+    <div class="film-letterbox film-letterbox-top"></div>
+    <div class="film-letterbox film-letterbox-bottom"></div>
+    <div class="relative z-10 text-center reveal-up px-margin-mobile">
+        <span class="font-label-md text-label-md text-tertiary tracking-[0.4em] uppercase block mb-6">Volume I · The Aetheris Film</span>
+        <h2 class="font-display-lg text-[clamp(2rem,5vw,3.25rem)] text-on-surface text-glow mb-10 leading-tight max-w-3xl mx-auto">A Cinematic Tour of Our Coastal Pavilion</h2>
+        <button id="film-play" class="inline-flex items-center gap-5 px-8 py-4 border border-white/40 hover:border-tertiary hover:bg-white/5 transition-all duration-500 group" aria-label="Play campaign film in full screen">
+            <span class="w-12 h-12 rounded-full border border-white/40 group-hover:border-tertiary flex items-center justify-center transition-colors duration-500">
+                <span class="material-symbols-outlined text-white group-hover:text-tertiary text-2xl transition-colors duration-500">play_arrow</span>
+            </span>
+            <span class="font-label-lg text-label-lg tracking-[0.3em] text-white/90 uppercase">Play Reel · 2:34</span>
+        </button>
+    </div>
+    <div class="film-meta absolute bottom-8 left-0 right-0 z-10 flex justify-between items-end px-margin-mobile md:px-margin-desktop text-on-surface-variant">
+        <span class="font-label-md text-label-md tracking-[0.3em] uppercase">Aetheris · 2026</span>
+        <span class="film-rec flex items-center gap-2 font-label-md text-label-md tracking-[0.3em] uppercase">
+            <span class="rec-dot"></span>REC · LIVE
+        </span>
+    </div>
+</section>
+
+<!-- VIDEO TOUR — FULLSCREEN MODAL -->
+<div id="film-modal" class="film-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Aetheris film player">
+    <button id="film-close" class="film-close" aria-label="Close film">
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <video id="film-player" class="film-player" controls playsinline preload="metadata">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4"/>
+    </video>
+</div>
+
+<!-- IN THE PRESS (Editorial Pull-Quotes) -->
+<section id="press" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+    <div class="max-w-max-width mx-auto">
+        <div class="mb-20 max-w-2xl reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-6">In the Press</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.05]">Quietly noticed.</h2>
+        </div>
+        <div class="space-y-2">
+            <blockquote class="press-quote text-center max-w-4xl mx-auto py-12" data-press>
+                <p class="font-display-lg text-[clamp(1.5rem,3.5vw,2.5rem)] leading-[1.35] mb-8" data-press-text>"Aetheris has done what almost no other practice has — built a portfolio that reads more like an anthology of architectural essays than a development pipeline."</p>
+                <p class="press-attr font-label-lg text-label-lg tracking-[0.3em] uppercase text-tertiary">— Architectural Digest · April 2026</p>
+            </blockquote>
+            <span class="press-divider block"></span>
+            <blockquote class="press-quote text-center max-w-4xl mx-auto py-12" data-press>
+                <p class="font-display-lg text-[clamp(1.5rem,3.5vw,2.5rem)] leading-[1.35] mb-8" data-press-text>"The studio's residences feel like they have always been there — geological, inevitable, and built to outlast their commissioners by several generations."</p>
+                <p class="press-attr font-label-lg text-label-lg tracking-[0.3em] uppercase text-tertiary">— Wallpaper* · February 2026</p>
+            </blockquote>
+            <span class="press-divider block"></span>
+            <blockquote class="press-quote text-center max-w-4xl mx-auto py-12" data-press>
+                <p class="font-display-lg text-[clamp(1.5rem,3.5vw,2.5rem)] leading-[1.35] mb-8" data-press-text>"There is a quietness to the work — a refusal to perform — that makes it unmistakable to anyone who has spent ten minutes inside one of these buildings."</p>
+                <p class="press-attr font-label-lg text-label-lg tracking-[0.3em] uppercase text-tertiary">— Monocle · November 2025</p>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+    <div class="max-w-4xl mx-auto text-center reveal-up">
+        <span class="material-symbols-outlined text-tertiary text-6xl mb-12" aria-hidden="true">format_quote</span>
+        <blockquote class="font-display-lg text-[clamp(1.75rem,4vw,2.75rem)] mb-12 leading-[1.3]">
+            "Aetheris doesn't build houses; they craft spatial narratives. The way light moves through my residence is a daily meditation."
+        </blockquote>
+        <p class="font-label-lg text-label-lg tracking-[0.3em] uppercase">— Marcus V., Architectural Collector</p>
+    </div>
+</section>
+
+<!-- VOLUMES (Annual Anthology) -->
+<section id="volumes" class="py-20 md:py-40 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10">
+    <div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div class="volume-book-wrap order-2 md:order-1 reveal-up">
+            <div id="volume-book" class="volume-book" role="button" tabindex="0" aria-pressed="false" aria-label="Open Volume IV preview">
+                <div class="volume-cover">
+                    <span class="volume-spine-text">AETHERIS · VOLUME IV · 2026</span>
+                    <div class="volume-cover-inner">
+                        <div>
+                            <p class="font-label-md text-label-md text-tertiary tracking-[0.3em] uppercase mb-3">Aetheris</p>
+                            <p class="font-label-md text-[10px] text-on-surface-variant tracking-[0.4em] uppercase">Volume IV · MMXXVI</p>
+                        </div>
+                        <div>
+                            <h3 class="font-display-lg text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] mb-4">The Annual Anthology of Architectural Living.</h3>
+                            <p class="font-label-md text-label-md text-tertiary tracking-[0.2em] uppercase">228 pages · Hand-numbered · 1 of 500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="volume-pages">
+                    <p class="font-display-lg text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.3] mb-6" style="color:#1c1b1b;">"Architecture, like literature, is at its best when it asks more of the reader than it gives."</p>
+                    <p class="font-label-md text-label-md tracking-[0.2em] uppercase" style="color:#584324;">— From the editor's note</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 md:order-2 reveal-up">
+            <span class="font-label-lg text-label-lg text-tertiary tracking-[0.3em] uppercase block mb-6">The Anthology</span>
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] mb-8 leading-[1.05]">Volume IV.<br/>Five hundred copies.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                Our annual hardcover anthology — 228 pages of completed residences, editorial essays, drawings, and material studies. Hand-numbered, limited to 500, distributed only to inquiring collectors.
+            </p>
+            <ul class="space-y-3 mb-12 max-w-md">
+                <li class="font-label-lg text-label-lg tracking-[0.15em] flex justify-between border-b border-outline-variant/30 pb-3"><span>Edition</span><span class="text-on-surface-variant">First · MMXXVI</span></li>
+                <li class="font-label-lg text-label-lg tracking-[0.15em] flex justify-between border-b border-outline-variant/30 pb-3"><span>Pages</span><span class="text-on-surface-variant">228 · Smyth-sewn</span></li>
+                <li class="font-label-lg text-label-lg tracking-[0.15em] flex justify-between border-b border-outline-variant/30 pb-3"><span>Format</span><span class="text-on-surface-variant">9.5 × 12.25 in · Hardcover</span></li>
+                <li class="font-label-lg text-label-lg tracking-[0.15em] flex justify-between border-b border-outline-variant/30 pb-3"><span>Availability</span><span class="text-tertiary">Now reserving</span></li>
+            </ul>
+            <a href="#inquire" class="magnetic-btn inline-block bg-tertiary text-on-tertiary font-label-lg text-label-lg py-5 px-10 tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-500">Reserve a Copy</a>
+        </div>
+    </div>
+</section>
+
+<!-- INQUIRY -->
+<section id="inquire" class="py-20 md:py-40 bg-surface-container-low border-t border-outline-variant/20">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+        <div class="reveal-up">
+            <h2 class="font-display-lg text-[clamp(2.25rem,5vw,3.5rem)] mb-8 leading-tight">Begin Your Journey.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                Our curators are available for private consultations. We prioritize absolute discretion and personalized service for our distinguished clientele.
+            </p>
+            <div class="space-y-6">
+                <p class="font-label-lg text-label-lg border-b border-outline-variant/30 pb-4 flex justify-between gap-4">
+                    <span>Global Headquarters</span>
+                    <span class="text-on-surface-variant">Zurich, CH</span>
+                </p>
+                <p class="font-label-lg text-label-lg border-b border-outline-variant/30 pb-4 flex justify-between gap-4">
+                    <span>Enquiries</span>
+                    <span class="text-on-surface-variant">reserve@aetheris.com</span>
+                </p>
+                <p class="font-label-lg text-label-lg border-b border-outline-variant/30 pb-4 flex justify-between gap-4">
+                    <span>Concierge</span>
+                    <span class="text-on-surface-variant">+41 44 000 0000</span>
+                </p>
+            </div>
+        </div>
+        <div class="glass-panel p-8 md:p-12 reveal-up">
+            <form id="inquiry-form" class="space-y-10" novalidate>
+                <div>
+                    <label for="iq-name" class="block font-label-md text-label-md text-tertiary mb-4 uppercase tracking-widest">Full Name</label>
+                    <input id="iq-name" class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary focus:ring-0 transition-colors duration-500 py-4 text-on-surface font-body-md" placeholder="Alexander Sterling" type="text" required/>
+                </div>
+                <div>
+                    <label for="iq-email" class="block font-label-md text-label-md text-tertiary mb-4 uppercase tracking-widest">Email Address</label>
+                    <input id="iq-email" class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary focus:ring-0 transition-colors duration-500 py-4 text-on-surface font-body-md" placeholder="sterling@private.com" type="email" required/>
+                </div>
+                <div>
+                    <label for="iq-portfolio" class="block font-label-md text-label-md text-tertiary mb-4 uppercase tracking-widest">Interest Portfolio</label>
+                    <select id="iq-portfolio" class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary focus:ring-0 transition-colors duration-500 py-4 text-on-surface font-body-md appearance-none">
+                        <option class="bg-surface">The Heights Collection</option>
+                        <option class="bg-surface">Coastal Estates</option>
+                        <option class="bg-surface">Urban Monoliths</option>
+                    </select>
+                </div>
+                <button type="submit" class="magnetic-btn w-full bg-tertiary text-on-tertiary font-label-lg text-label-lg py-6 tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-500">Request Dossier</button>
+                <p id="inquiry-msg" class="font-label-lg text-label-lg text-tertiary uppercase tracking-widest hidden">Received. A curator will reach out within 48 hours.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full py-20 bg-surface-container-lowest border-t border-outline-variant/30">
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+        <div class="col-span-2 md:col-span-4">
+            <div class="font-display-lg text-headline-lg text-on-surface mb-8">AETHERIS</div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                Curating the world's most profound architectural experiences for those who value the luxury of space.
+            </p>
+        </div>
+        <div class="md:col-span-2">
+            <h5 class="font-label-md text-label-md text-tertiary tracking-[0.2em] uppercase mb-8">Portfolio</h5>
+            <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#residences">Residences</a></li>
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#residences">Estates</a></li>
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#">New Developments</a></li>
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#">Sold Archive</a></li>
+            </ul>
+        </div>
+        <div class="md:col-span-2">
+            <h5 class="font-label-md text-label-md text-tertiary tracking-[0.2em] uppercase mb-8">Company</h5>
+            <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#">Investors</a></li>
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#">Press</a></li>
+                <li><a class="hover:text-on-surface cursor-pointer transition-colors" href="#">Accessibility</a></li>
+            </ul>
+        </div>
+        <div class="md:col-span-4 flex flex-col justify-between">
+            <div class="flex space-x-6 md:justify-end">
+                <a class="material-symbols-outlined text-on-surface-variant hover:text-tertiary cursor-pointer transition-colors" href="#" aria-label="Website">language</a>
+                <a class="material-symbols-outlined text-on-surface-variant hover:text-tertiary cursor-pointer transition-colors" href="#" aria-label="Share">share</a>
+                <a class="material-symbols-outlined text-on-surface-variant hover:text-tertiary cursor-pointer transition-colors" href="#" aria-label="Policy">policy</a>
+            </div>
+            <div class="md:text-right mt-12">
+                <p class="font-label-md text-label-md text-on-surface-variant tracking-[0.2em] uppercase">© 2026 Aetheris Architectural Realty. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" class="fixed bottom-12 right-6 md:right-12 w-14 h-14 glass-panel rounded-full flex items-center justify-center hover:bg-tertiary hover:text-on-tertiary transition-colors duration-500 z-40 group" aria-label="Scroll to top">
+    <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform duration-500">arrow_upward</span>
+</button>
+
+<script>
+(function () {
+    'use strict';
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---------- Mobile menu ----------
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    const closeMenu = () => {
+        menuOpen = false; mobileMenu.classList.remove('open');
+        menuBtn.textContent = 'menu';
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
+    const openMenu = () => {
+        menuOpen = true; mobileMenu.classList.add('open');
+        menuBtn.textContent = 'close';
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    };
+    menuBtn?.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // ---------- Inquiry form ----------
+    const form = document.getElementById('inquiry-form');
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = form.querySelector('#iq-name');
+        const email = form.querySelector('#iq-email');
+        const msg = document.getElementById('inquiry-msg');
+        if (name.value && email.value && email.checkValidity()) {
+            msg.classList.remove('hidden');
+            form.querySelector('button[type="submit"]').textContent = 'Received';
+        }
+    });
+
+    // ---------- Smooth anchor fallback ----------
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            const id = a.getAttribute('href');
+            if (id.length <= 1) return;
+            const t = document.querySelector(id);
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' }); }
+        });
+    });
+
+    // ---------- Residences carousel arrows ----------
+    const track = document.getElementById('residences-track');
+    document.getElementById('res-prev')?.addEventListener('click', () => {
+        track.scrollBy({ left: -track.clientWidth * 0.6, behavior: 'smooth' });
+    });
+    document.getElementById('res-next')?.addEventListener('click', () => {
+        track.scrollBy({ left: track.clientWidth * 0.6, behavior: 'smooth' });
+    });
+
+    // ---------- Scroll-to-top visibility ----------
+    const sct = document.getElementById('scroll-top');
+    sct?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) sct.classList.add('visible');
+        else sct.classList.remove('visible');
+    });
+
+    // ---------- Film modal ----------
+    const filmModal = document.getElementById('film-modal');
+    const filmPlayer = document.getElementById('film-player');
+    const filmBg = document.getElementById('film-bg');
+    const openFilm = () => {
+        if (!filmModal || !filmPlayer) return;
+        filmModal.classList.add('open');
+        filmModal.setAttribute('aria-hidden', 'false');
+        filmPlayer.currentTime = 0;
+        filmPlayer.muted = false;
+        filmPlayer.play().catch(() => {});
+        filmBg?.pause();
+        document.body.style.overflow = 'hidden';
+    };
+    const closeFilm = () => {
+        if (!filmModal || !filmPlayer) return;
+        filmModal.classList.remove('open');
+        filmModal.setAttribute('aria-hidden', 'true');
+        filmPlayer.pause();
+        filmBg?.play().catch(() => {});
+        document.body.style.overflow = '';
+    };
+    document.getElementById('film-play')?.addEventListener('click', openFilm);
+    document.getElementById('film-close')?.addEventListener('click', closeFilm);
+    filmModal?.addEventListener('click', (e) => { if (e.target === filmModal) closeFilm(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && filmModal?.classList.contains('open')) closeFilm(); });
+
+    // ---------- Volume book open/close ----------
+    const volumeBook = document.getElementById('volume-book');
+    const toggleVolume = () => {
+        const opened = volumeBook.classList.toggle('opened');
+        volumeBook.setAttribute('aria-pressed', String(opened));
+    };
+    volumeBook?.addEventListener('click', toggleVolume);
+    volumeBook?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleVolume(); }
+    });
+
+    // ---------- Press: split into words for stagger ----------
+    document.querySelectorAll('[data-press-text]').forEach(para => {
+        if (para.dataset.split) return;
+        const text = para.textContent.trim();
+        const words = text.split(/\s+/);
+        para.innerHTML = words.map((w, i) =>
+            `<span class="press-word ${i % 2 === 0 ? 'even' : 'odd'}" style="transition-delay:${i * 0.04}s">${w}</span>`
+        ).join(' ');
+        para.dataset.split = '1';
+    });
+
+    // ---------- Resilient reveal for new sections (works even if GSAP fails) ----------
+    const sectionIO = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in');
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    const atelierBlock = document.querySelector('.atelier-locations');
+    if (atelierBlock) {
+        const items = atelierBlock.querySelectorAll('[data-atelier]');
+        const atelierIO = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    atelierBlock.classList.add('in');
+                    items.forEach((it, i) => setTimeout(() => it.classList.add('in'), 200 + i * 220));
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        atelierIO.observe(atelierBlock);
+    }
+
+    document.querySelectorAll('[data-material]').forEach((card, i) => {
+        const ioOnce = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    setTimeout(() => card.classList.add('swept'), 150 + i * 140);
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        ioOnce.observe(card);
+        card.addEventListener('mouseenter', () => {
+            card.classList.remove('swept');
+            void card.offsetWidth;
+            card.classList.add('swept');
+        });
+    });
+
+    document.querySelectorAll('[data-curator]').forEach((c, i) => {
+        const ioOnce = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    setTimeout(() => c.classList.add('in'), i * 180);
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        ioOnce.observe(c);
+    });
+
+    document.querySelectorAll('[data-press]').forEach(q => sectionIO.observe(q));
+    document.querySelectorAll('.press-divider').forEach(d => sectionIO.observe(d));
+
+    // ---------- Custom cursor + magnetic buttons (desktop, non-reduced-motion) ----------
+    const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    if (!reduceMotion && !isTouch) {
+        const dot = document.querySelector('.cursor-dot');
+        const ring = document.querySelector('.cursor-ring');
+        if (dot && ring) {
+            let dotX = window.innerWidth / 2, dotY = window.innerHeight / 2;
+            let ringX = dotX, ringY = dotY;
+            let targetX = dotX, targetY = dotY;
+            const lerp = (a, b, n) => a + (b - a) * n;
+            window.addEventListener('pointermove', (e) => {
+                targetX = e.clientX; targetY = e.clientY;
+            }, { passive: true });
+            const tick = () => {
+                dotX = lerp(dotX, targetX, 0.55);
+                dotY = lerp(dotY, targetY, 0.55);
+                ringX = lerp(ringX, targetX, 0.18);
+                ringY = lerp(ringY, targetY, 0.18);
+                dot.style.transform = `translate(${dotX}px, ${dotY}px) translate(-50%,-50%)`;
+                ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%,-50%)`;
+                requestAnimationFrame(tick);
+            };
+            tick();
+            const interactive = 'a, button, [data-caption], .residence-card, .volume-book, [data-amenity], [data-material], [data-curator]';
+            document.querySelectorAll(interactive).forEach(el => {
+                el.addEventListener('pointerenter', () => {
+                    document.body.classList.add('cursor-hover');
+                    if (el.matches('.volume-book')) {
+                        document.body.classList.add('cursor-label');
+                        ring.textContent = 'OPEN';
+                    } else if (el.matches('#film-play, [aria-label*="film"]')) {
+                        document.body.classList.add('cursor-label');
+                        ring.textContent = 'PLAY';
+                    }
+                });
+                el.addEventListener('pointerleave', () => {
+                    document.body.classList.remove('cursor-hover', 'cursor-label');
+                    ring.textContent = '';
+                });
+            });
+        }
+
+        // Magnetic buttons
+        document.querySelectorAll('.magnetic-btn').forEach(btn => {
+            const strength = 0.18;
+            btn.addEventListener('pointermove', (e) => {
+                const r = btn.getBoundingClientRect();
+                const x = e.clientX - (r.left + r.width / 2);
+                const y = e.clientY - (r.top + r.height / 2);
+                btn.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+            });
+            btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+        });
+    }
+
+    if (reduceMotion) return;
+
+    const waitForLibs = (cb) => {
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof Lenis !== 'undefined') return cb();
+        setTimeout(() => waitForLibs(cb), 40);
+    };
+    waitForLibs(initAnimations);
+
+    function initAnimations() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Lenis
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true
+        });
+        lenis.stop();
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+
+        // ----- Letterbox intro -----
+        const intro = gsap.timeline({
+            onComplete: () => { lenis.start(); ScrollTrigger.refresh(); }
+        });
+        intro.to('.letterbox', {
+            height: 0, duration: 1.4, ease: 'expo.inOut', delay: 0.2
+        });
+
+        // ----- Hero rack-focus blur (sharpen) -----
+        intro.to('.hero-img', {
+            filter: 'blur(0px) brightness(1)',
+            scale: 1.0,
+            duration: 1.8, ease: 'expo.out'
+        }, '-=1.0');
+
+        // ----- Hero grid overlay flash -----
+        intro.fromTo('.grid-overlay',
+            { opacity: 0 },
+            { opacity: 0.7, duration: 0.4, ease: 'power2.out' },
+            '-=1.6');
+        intro.to('.grid-overlay', {
+            opacity: 0, duration: 1.0, ease: 'power2.inOut'
+        }, '-=0.8');
+
+        // ----- Title card 3D tilt + scale settle -----
+        intro.to('.title-card', {
+            opacity: 1, rotateX: 0, scale: 1,
+            duration: 1.6, ease: 'expo.out'
+        }, '-=1.2');
+
+        // ----- Hero subtitle + scroll cue (fromTo so element is visible even if JS fails) -----
+        intro.fromTo('.hero-fade',
+            { opacity: 0 },
+            { opacity: 1, duration: 1.0, ease: 'expo.out', stagger: 0.18 },
+            '-=0.8');
+        // Dim ONLY the scroll cue — earlier `.hero-fade:last-child` also matched the subtitle
+        // because both .hero-fade elements happen to be last-child of their respective parents.
+        intro.set('.hero-cue', { opacity: 0.5 });
+
+        // ----- Nav state -----
+        ScrollTrigger.create({
+            start: 60, end: 'max',
+            toggleClass: { className: 'nav-scrolled', targets: '#main-nav' }
+        });
+
+        // ----- Horizontal slat (venetian) reveal -----
+        gsap.utils.toArray('.slat-reveal').forEach((root) => {
+            const slats = root.querySelectorAll('.slat');
+            const tl = gsap.timeline({
+                scrollTrigger: { trigger: root, start: 'top 85%' }
+            });
+            slats.forEach((s, i) => {
+                tl.to(s, {
+                    xPercent: (i % 2 === 0 ? -101 : 101),
+                    duration: 0.85,
+                    ease: 'expo.inOut'
+                }, i * 0.06);
+            });
+        });
+
+        // ----- Reveal-up (generic fade + small y) -----
+        gsap.utils.toArray('.reveal-up').forEach((el) => {
+            gsap.from(el, {
+                opacity: 0, y: 36, duration: 1.3, ease: 'expo.out',
+                scrollTrigger: { trigger: el, start: 'top 88%' }
+            });
+        });
+
+        // ----- Stagger groups -----
+        gsap.utils.toArray('[data-stagger]').forEach((container) => {
+            const items = container.querySelectorAll('[data-stagger-item]');
+            gsap.from(items, {
+                opacity: 0, y: 30, duration: 1.2, ease: 'expo.out', stagger: 0.1,
+                scrollTrigger: { trigger: container, start: 'top 82%' }
+            });
+        });
+
+        // ----- Architectural Gallery: Awwwards anchor — pinned scroll-scrub with image crossfade -----
+        const galleryStack = document.querySelector('[data-gallery-stack]');
+        const galleryImgs = galleryStack ? Array.from(galleryStack.querySelectorAll('img')) : [];
+        const setActiveGalleryImg = (idx) => {
+            galleryImgs.forEach((img, i) => img.classList.toggle('is-active', i === idx));
+        };
+        const captions = document.querySelectorAll('.caption-block');
+        captions.forEach((c) => {
+            ScrollTrigger.create({
+                trigger: c,
+                start: 'top 60%', end: 'bottom 40%',
+                onToggle: (self) => {
+                    c.classList.toggle('is-active', self.isActive);
+                    if (self.isActive && c.dataset.galleryCaption !== undefined) {
+                        setActiveGalleryImg(parseInt(c.dataset.galleryCaption, 10));
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+})();
+</script>
+</body>
+</html>
